@@ -11,6 +11,10 @@ import {
   SI4,
   Line,
   FImg,
+  CD1,
+  CD2,
+  CD3,
+  CD4,
 } from "../../../assets";
 
 const Home = () => {
@@ -165,6 +169,21 @@ const Home = () => {
           <h1> We are blogging about it.</h1>
         </div>
       </div>
+      <div className="card-container">
+        <div className="card-container-content">
+          <div className="card-container-content-left">
+            <Card1 />
+          </div>
+          <div className="card-container-content-middle">
+            <Card2 CD1={CD1} />
+            <Card2 CD1={CD2} />
+          </div>
+          <div className="card-container-content-right">
+            <Card2 CD1={CD3} />
+            <Card2 CD1={CD4} />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
@@ -192,6 +211,40 @@ const DataColumn = ({ heading, data }) => {
       </div>
       <div className="dtacol-p2">
         <p>{data}</p>
+      </div>
+    </div>
+  );
+};
+
+const Card1 = () => {
+  return (
+    <div className="card1">
+      <div className="card1-content1"></div>
+      <div className="card1-content2">
+        <div className="card1-content2-p1">
+          <p>Sep 26, 2021</p>
+          <h1>GPT-3 and Open AI is the future. Let us exlore how it is?</h1>
+        </div>
+        <div className="card1-content2-p2">
+          <p>Read Full Article</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Card2 = ({CD1}) => {
+  return (
+    <div className="card2">
+      <div className="card2-content1">
+        <img src={CD1} alt="ph1" />
+      </div>
+      <div className="card2-content2">
+        <div className="card2-content2-p1">
+          <p>Sep 26, 2021</p>
+          <h1>GPT-3 and Open AI is the future. Let us exlore how it is?</h1>
+        </div>
+        <p>Read Full Article</p>
       </div>
     </div>
   );

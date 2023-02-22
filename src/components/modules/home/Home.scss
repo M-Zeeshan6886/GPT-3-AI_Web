@@ -484,3 +484,134 @@
     }
   }
 }
+
+.card-container {
+  width: 100%;
+  height: auto;
+  padding: 7.5rem 0rem;
+  background-color: $bgclr;
+  &-content {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0rem;
+    // background-color: aquamarine;
+    &-left {
+      width: 35%;
+      // width: 417px;
+      height: auto;
+      // padding: 0.5rem 0rem;
+      // background-color: lightcyan;
+    }
+    &-middle {
+      width: 27.5%;
+      // width: 315px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // padding: 0.5rem 0rem;
+      // background-color: lightcyan;
+    }
+    &-right {
+      width: 27.5%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // padding: 0.5rem 0rem;
+      // background-color: lightcyan;
+    }
+  }
+}
+
+.card1 {
+  width: 100%;
+  height: auto;
+  // padding: 0.5rem 0rem;
+  // background-color: lightblue;
+  &-content1 {
+    width: 100%;
+    height: 287px;
+    background-image: url("../../../assets/bodyAssets/cd1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &-content2 {
+    width: 100%;
+    height: 407px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background-color: #042c54;
+    &-p1 {
+      & > p {
+        font-weight: 700;
+        font-size: 11.649px;
+        line-height: 35px;
+        color: #ffffff;
+      }
+      & > h1 {
+        font-weight: 800;
+        font-size: 2.5rem;
+        line-height: 30px;
+        color: #ffffff;
+      }
+    }
+    &-p2 {
+      & > p {
+        font-weight: 700;
+        font-size: 11.649px;
+        line-height: 35px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.card2 {
+  width: 100%;
+  height: auto;
+  // padding: .5rem 0rem;
+  background-color: #042c54;
+  &-content1 {
+    width: 100%;
+    height: 130px;
+    & > img {
+      width: 100%;
+      height: 130px;
+    }
+  }
+  &-content2 {
+    width: 100%;
+    height: 193px;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-p1 {
+      & > p {
+        font-weight: 700;
+        font-size: 11.649px;
+        line-height: 35px;
+        color: #ffffff;
+      }
+      & > h1 {
+        font-weight: 800;
+        font-size: 1.7rem;
+        line-height: 30px;
+        color: #ffffff;
+      }
+    }
+    & > p {
+      font-weight: 700;
+      font-size: 11.649px;
+      line-height: 35px;
+      color: #ffffff;
+    }
+  }
+}
