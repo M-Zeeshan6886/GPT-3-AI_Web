@@ -10,6 +10,7 @@ import {
   SI3,
   SI4,
   Line,
+  FImg,
 } from "../../../assets";
 
 const Home = () => {
@@ -99,6 +100,71 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="container4">
+        <div className="container4-content">
+          <div className="container4-content-left">
+            <h1>
+              The Future is Now and You Just Need To Realize It. Step into
+              Future Today & Make it Happen.
+            </h1>
+            <p>Request Early Access to Get Started</p>
+          </div>
+          <div className="container4-content-right">
+            <DataColumn
+              heading="Improving end distrusts instantly "
+              data="From they fine john he give of rich he. They age and draw mrs like.
+          Improving end distrusts may instantly was household applauded."
+            />
+            <DataColumn
+              heading="Become the tended active "
+              data="Considered sympathize ten uncommonly occasional assistance sufficient not. Letter of on become he tended active enable to."
+            />
+            <DataColumn
+              heading="Message or am nothing "
+              data="Led ask possible mistress relation elegance eat likewise debating. By message or am nothing amongst chiefly address."
+            />
+            <DataColumn
+              heading="Really boy law county "
+              data="From they fine john he give of rich he. They age and draw mrs like.
+          Improving end distrusts may instantly was household applauded."
+            />
+          </div>
+        </div>
+      </div>
+      <div className="container6">
+        <div className="container6-content">
+          <div className="container6-content-left">
+            <img src={FImg} alt="Feature-img" />
+          </div>
+          <div className="container6-content-right">
+            <span>Request Early Acess to Get Started</span>
+            <h1>The possibilities are beyond your imagination</h1>
+            <p>
+              Yet bed any for travelling assistance indulgence unpleasing. Not
+              thoughts all exercise blessing. Indulgence way everything joy
+              alteration boisterous the attachment. Party we years to order
+              allow asked of.
+            </p>
+            <h5>Request Early Acess to Get Started</h5>
+          </div>
+        </div>
+      </div>
+      <div className="container7">
+        <div className="container7-content">
+          <p>Request Early Acess to Get Started</p>
+          <div>
+            <h1>Register today & start exploring the endless possiblities.</h1>
+            <button>Get Started</button>
+          </div>
+        </div>
+      </div>
+
+      <div className="container8">
+        <div className="container8-content">
+          <h1>A lot is happening,</h1>
+          <h1> We are blogging about it.</h1>
+        </div>
+      </div>
     </>
   );
 };
@@ -112,6 +178,20 @@ const GPTdata = ({ Tittle, chatdata }) => {
         <img src={Line} alt="lineIng" />
         <h1> {Tittle} </h1>
         <p>{chatdata}</p>
+      </div>
+    </div>
+  );
+};
+
+const DataColumn = ({ heading, data }) => {
+  return (
+    <div className="dtacol">
+      <div className="dtacol-p1">
+        <img src={Line} alt="lineImg" />
+        <h1> {heading} </h1>
+      </div>
+      <div className="dtacol-p2">
+        <p>{data}</p>
       </div>
     </div>
   );
