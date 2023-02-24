@@ -184,6 +184,12 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="container9">
+        <div className="container9-content">
+          <h1>Do you want to step in to the future before others</h1>
+          <button>Request Early Access</button>
+        </div>
+      </div>
     </>
   );
 };
@@ -233,7 +239,7 @@ const Card1 = () => {
   );
 };
 
-const Card2 = ({CD1}) => {
+const Card2 = ({ CD1 }) => {
   return (
     <div className="card2">
       <div className="card2-content1">

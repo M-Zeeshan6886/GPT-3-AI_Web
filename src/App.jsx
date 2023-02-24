@@ -1,6 +1,6 @@
 
 import './App.css';
-import {Navbar} from './components/common'
+import {Navbar,Footer} from './components/common'
 import {Home} from './components/modules'
 function App() {
 
@@ -9,8 +9,9 @@ function App() {
     
     <Navbar />
     <Home />
+    <Footer />
     </>
   )
 }
 
-export default App
+export default App;

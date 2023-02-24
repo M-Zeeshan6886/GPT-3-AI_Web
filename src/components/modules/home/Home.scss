@@ -7,6 +7,7 @@
   padding: 0.5rem 0rem;
   background-color: $bgclr;
   //   background-color: aqua;
+  
   &-content {
     width: 80%;
     height: auto;
@@ -14,6 +15,14 @@
     display: flex;
     padding: 0.5rem 0rem;
     // background-color: lightcoral;
+    @include respond(phone){
+      width: 80%;
+    flex-direction: column;
+  }
+    @include respond(tab-port){
+      width: 80%;
+    flex-direction: column;
+  }
     &-left {
       width: 50%;
       height: auto;
@@ -23,6 +32,12 @@
       justify-content: center;
       padding: 0.5rem 0rem;
       //   background-color: lightblue;
+      @include respond(phone){
+        width: 100%;
+      }
+      @include respond(tab-port){
+        width: 100%;
+      }
       & > h1 {
         font-family: "Manrope";
         font-weight: 800;
@@ -33,6 +48,9 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        @include respond(phone){
+          font-size: 4.5rem;
+        }
       }
       & > p {
         margin-top: 33px;
@@ -51,7 +69,9 @@
           margin-top: 40px;
           color: white;
           border-radius: 5px 0px 0px 5px;
-
+          @include respond(phone){
+            border-radius:5px ;
+          }
           ::placeholder {
             font-weight: 400;
             font-size: 1.5rem;
@@ -75,6 +95,11 @@
           border: none;
           font-weight: 600;
           font-size: 1.4rem;
+          @include respond(phone){
+            width: 140px;
+            border-radius: 5px;
+            margin-top:1rem ;
+          }
         }
       }
       &-pffield {
@@ -83,6 +108,9 @@
         display: flex;
         padding: 1rem 0rem;
         // background-color: #ae67fa;
+        @include respond(phone){
+          flex-direction: column;
+        }
         &-left {
           width: 35%;
           height: auto;
@@ -90,6 +118,10 @@
           align-items: center;
           padding: 0.5rem 0rem;
           //   background-color: #f49867;
+          @include respond(phone){
+            margin-top: 1rem;
+            width: 100%;
+          }
           &-imgfield {
             & > * {
               width: 36px;
@@ -118,7 +150,7 @@
           width: 65%;
           height: auto;
           padding: 0.5rem 0rem;
-          //   background-color: lightcoral;
+            // background-color: lightcoral;
           & > p {
             font-weight: 500;
             font-size: 1.2rem;
@@ -133,11 +165,22 @@
       height: auto;
       padding: 0.5rem 0rem;
       //   background-color: lightgreen;
+      @include respond(phone){
+        width: 100%;
+      }
       & > img {
         margin-top: -3rem;
         // margin-left: -rem;
         width: 600px;
         height: 701.59px;
+        @include respond(phone){
+          margin-top: 0px;
+          width: 400px;
+          height: 400px;
+        }
+        @include respond(tab-port){
+          margin-top: 2rem;
+        }
       }
     }
   }
@@ -156,9 +199,22 @@
     justify-content: space-between;
     padding: 2.5rem 0rem;
     // background-color: powderblue;
+    @include respond(phone){
+      width: 80%;
+      flex-direction: column;
+      &>*:not(:first-child){
+        margin-top: 3rem;
+      }
+    }
     & > img {
       width: 100px;
       height: 25px;
+      cursor: pointer;
+      @include respond(phone){
+        // width: 50%;
+        margin-top: 1rem;
+        margin: auto;
+      }
     }
   }
 }
@@ -185,12 +241,18 @@
       display: flex;
       padding: 2rem 0rem;
       // background-color: lavenderblush;
+      @include respond(phone){
+        flex-direction: column;
+      }
       &-left {
         width: 35%;
         height: auto;
         padding: 0.5rem 0rem;
         // background-color: lightgreen;
         margin-top: -20px;
+        @include respond(phone){
+          width: 100%;
+        }
         // &>img{
         //   // width: 50%;
         // }
@@ -208,11 +270,17 @@
         height: auto;
         padding: 0.5rem 0rem;
         // background-color: lightgray;
+        @include respond(phone){
+          width: 100%;
+        }
         & > p {
           font-weight: 500;
           font-size: 1.3rem;
           line-height: 30px;
           color: #81afdd;
+          @include respond(phone){
+           margin-top: 2rem; 
+          }
         }
       }
     }
@@ -225,6 +293,10 @@
       justify-content: space-between;
       padding: 5rem 0rem;
       // background-color: lemonchiffon;
+      @include respond(phone){
+          //  flex-direction: column;
+            
+          }
       & > h1 {
         width: 50%;
         font-weight: 800;
@@ -235,12 +307,21 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        @include respond(phone){
+           font-size: 1.5rem; 
+          }
+        @include respond(tab-port){
+           font-size: 2.5rem; 
+          }
       }
       & > p {
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 30px;
         color: #ff8a71;
+        @include respond(phone){
+           font-size: 1.2rem; 
+          }
       }
     }
     &-row3 {
@@ -251,6 +332,9 @@
       justify-content: space-between;
       padding: 0.5rem 0rem;
       // background-color: lightgreen;
+      @include respond(phone){
+           flex-direction:column; 
+          }
     }
   }
 }
@@ -260,6 +344,9 @@
   height: auto;
   padding: 2.5rem 0rem;
   // background-color: pink;
+  @include respond(phone){
+           width: 100%; 
+          }
   &-content {
     & > h1 {
       font-weight: 800;
@@ -291,14 +378,20 @@
     justify-content: space-between;
     padding: 2.5rem 0rem;
     // background-color: lemonchiffon;
+    @include respond(phone){
+           flex-direction: column; 
+          }
     &-left {
       width: 40%;
       height: auto;
       padding: 0.5rem 0rem;
       // background-color: lightblue;
+      @include respond(phone){
+           width: 100%; 
+          }
       & > h1 {
         font-weight: 800;
-        font-size: 34px;
+        font-size: 3.4rem;
         line-height: 45px;
         /* or 132% */
 
@@ -307,6 +400,12 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        @include respond(phone){
+           font-size: 2.5rem; 
+          }
+        @include respond(tab-port){
+           font-size: 2.7rem; 
+          }
       }
       & > p {
         margin-top: 34px;
@@ -321,6 +420,9 @@
       height: auto;
       padding: 0.5rem 0rem;
       // background-color: lightgreen;
+      @include respond(phone){
+           width: 100%; 
+          }
     }
   }
 }
@@ -371,11 +473,17 @@
     display: flex;
     padding: 0.5rem 0rem;
     // background-color: pink;
+    @include respond(phone){
+           flex-direction: column; 
+          }
     &-left {
       width: 50%;
       height: auto;
       padding: 0.5rem 0rem;
       // background-color: lightgreen;
+      @include respond(phone){
+           width: 100%; 
+          }
       & > img {
         width: 100%;
       }
@@ -388,9 +496,13 @@
       flex-direction: column;
       justify-content: flex-end;
       // background-color: lightseagreen;
+      @include respond(phone){
+           width: 100%;
+           margin-top: 1rem; 
+          }
       & > span {
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 30px;
         color: #71e5ff;
       }
@@ -399,7 +511,7 @@
 
         width: 90%;
         font-weight: 800;
-        font-size: 34px;
+        font-size: 3.4rem;
         line-height: 45px;
         background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%),
           #ffffff;
@@ -448,6 +560,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      // background-color: #71e5ff;
+      @include respond(phone){
+           flex-direction: column;
+           justify-content: space-between; 
+          }
       & > button {
         cursor: pointer;
         width: 189.14px;
@@ -457,6 +574,16 @@
         color: white;
         font-size: 1.5rem;
         font-weight: 700;
+        @include respond(phone){
+           margin-top: 2rem;
+           width: 159px;
+           height: 49px; 
+          }
+        @include respond(tab-port){
+           margin-top: 2rem;
+           width: 159px;
+           height: 49px; 
+          }
       }
     }
   }
@@ -481,6 +608,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      @include respond(phone){
+           font-size: 4.2rem;
+           line-height: 50px; 
+          }
     }
   }
 }
@@ -498,12 +629,18 @@
     justify-content: space-between;
     padding: 0.5rem 0rem;
     // background-color: aquamarine;
+    @include respond(phone){
+           flex-direction: column; 
+          }
     &-left {
       width: 35%;
       // width: 417px;
       height: auto;
       // padding: 0.5rem 0rem;
       // background-color: lightcyan;
+      @include respond(phone){
+           width: 100%; 
+          }
     }
     &-middle {
       width: 27.5%;
@@ -514,6 +651,10 @@
       justify-content: space-between;
       // padding: 0.5rem 0rem;
       // background-color: lightcyan;
+      @include respond(phone){
+           width: 100%;
+          //  margin-top: 2rem; 
+          }
     }
     &-right {
       width: 27.5%;
@@ -523,6 +664,9 @@
       justify-content: space-between;
       // padding: 0.5rem 0rem;
       // background-color: lightcyan;
+      @include respond(phone){
+           width: 100%; 
+          }
     }
   }
 }
@@ -551,7 +695,7 @@
     &-p1 {
       & > p {
         font-weight: 700;
-        font-size: 11.649px;
+        font-size: 1.1rem;
         line-height: 35px;
         color: #ffffff;
       }
@@ -565,7 +709,7 @@
     &-p2 {
       & > p {
         font-weight: 700;
-        font-size: 11.649px;
+        font-size: 1.1rem;
         line-height: 35px;
         color: #ffffff;
       }
@@ -578,6 +722,9 @@
   height: auto;
   // padding: .5rem 0rem;
   background-color: #042c54;
+  @include respond(phone){
+           margin-top: 2.5rem; 
+          }
   &-content1 {
     width: 100%;
     height: 130px;
@@ -596,7 +743,7 @@
     &-p1 {
       & > p {
         font-weight: 700;
-        font-size: 11.649px;
+        font-size: 1.1rem;
         line-height: 35px;
         color: #ffffff;
       }
@@ -609,9 +756,51 @@
     }
     & > p {
       font-weight: 700;
-      font-size: 11.649px;
+      font-size: 1.1rem;
       line-height: 35px;
       color: #ffffff;
+    }
+  }
+}
+
+.container9 {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0rem;
+  background-color: #031b34;
+  &-content {
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0rem;
+    // background-color:  ;
+    & > h1 {
+      margin: auto;
+      width: 90%;
+      font-weight: 800;
+      font-size: 6.2rem;
+      line-height: 75px;
+      text-align: center;
+      letter-spacing: -0.04em;
+      background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      @include respond(phone){
+           font-size: 4rem; 
+          }
+    }
+    & > button {
+      cursor: pointer;
+      padding: 2rem 2rem;
+      font-size: 1.8rem;
+      line-height: 21px;
+      color: #ffffff;
+      background: none;
+      border: 1px solid white;
     }
   }
 }
